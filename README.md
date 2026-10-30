@@ -16,19 +16,16 @@ Separate models for writing and reading data. It is not an event pattern itself 
 
 
 
-## Contributing
-
-Please read the [contribution guidelines](contributing.md) if you'd like to contribute.
-
-
-## Sources
-
-[^1] Martin Fowler: [What do you mean by “Event-Driven”?](https://martinfowler.com/articles/201701-event-driven.html)
-
-
-## Footnotes
+## Following & Contributing
 
 To be updated about changes, follow me on <a href="https://mastodon.social/@lutzhuehnken" rel="me">Mastodon</a>, [Bluesky](https://bsky.app/profile/huehnken.de) or [LinkedIn](https://de.linkedin.com/in/lutzh). If you find this interesting, you might also like my [blog](https://www.reactivesystems.eu/blog/).
 
-I work as an independent consultant, helping organizations navigate the technical and organizational challenges involved in adopting Event-Driven Architecture. Find out about my services on [//lutz huehnken _consulting*](https://www.huehnken.de).
+
+Please read the [contribution guidelines](contributing.md) if you'd like to contribute.
+
+## Sources
+
+[^1]: Martin Fowler: [What do you mean by “Event-Driven”?](https://martinfowler.com/articles/201701-event-driven.html)
+
+
 
