@@ -3,7 +3,6 @@
 A list of terms used to describe events in event-driven architecture or event sourcing, in alphabetical order.
 
 
-
 <a id="clickbait-event"></a>**Clickbait Event**:
 An alternative name for [event notification](#event-notification), [trigger event](#trigger-event), and [signal event](#signal-event) that captures how these events appear to the receiver: They tell that something happened, but to find out what, you have to follow a link. 
 
@@ -24,13 +23,13 @@ An [event](#event) that is explicitly marked as being only valid until the next 
 Something that has happened in the past [^4]. A fact (it has been observed, it is undisputed). Often used as a synonym for [Event Message](#event-message). Events do not have a dedicated recipient; they are broadcast and can be consumed by services that the issuer of the event does not know about at runtime. Events do not yield a response; they are published in a "fire and forget" manner.
 
 <a id="event-carried-state-transfer"></a>**Event-Carried State Transfer**:
-An [event](#event) that carries the changed data, so receivers can update their own copy of the source's state without ever calling the source. The original source[^1] is very vague about how much data the event contains (Quote: _"events that contain details of the data that changed"_). It is now often used as a term for events that carry a complete representation of the entity that changed. See also [REST Event](#rest-event), [Fat Event](#fat-event), [Replication Event](#replication-event), [God Event](#god-event).
+An [event](#event) that carries the changed data, so receivers can update their own copy of the source's state without ever calling the source. The source of the term [^1] is vague about how much data the event contains (Quote: _"events that contain details of the data that changed"_). It is now often used as a term for events that carry a complete representation of the entity that changed. See also [REST Event](#rest-event), [Fat Event](#fat-event), [Replication Event](#replication-event), [God Event](#god-event).
 
 <a id="event-notification"></a>**Event Notification**:
 An [event](#event) that only signals that something changed in the sender's domain, without containing the changed data. It carries only a reference to the source of the event. Receivers ask the source when they need more detail.[^1] Synonyms are [signal event](#signal-event), [trigger event](#trigger-event), and [clickbait event](#clickbait-event).
 
 <a id="event-sourcing"></a>**Event Sourcing**:
-To persist entities or business objects, every state change is stored as an event. The event log is the primary source of truth. Current state is derived by replaying the log (also known as [hydration](#hydration)).[^1][^7]. Event sourcing is a persistence strategy internal to a service, as opposed to [event streaming](#event-streaming) and [event collaboration](#event-collaboration), which describe communication between services.
+To persist entities or domain objects, every state change is stored as an event. The event log is the primary source of truth. Current state is derived by replaying the log (also known as [hydration](#hydration)).[^1][^7]. Event sourcing is a persistence strategy internal to a service, as opposed to [event streaming](#event-streaming) and [event collaboration](#event-collaboration), which describe communication between services.
 
 <a id="event-stream"></a>**Event Stream**:
 In [event streaming](#event-streaming), an event stream is a flow of events from a source system that other systems can observe and/or process. In [event sourcing](#event-sourcing), however, it's an ordered sequence of events that represent state changes of a specific entity or domain object.
@@ -51,13 +50,13 @@ Not an [event](#event). A query asks for information. It yields a response that 
 An [event](#event) that carries a complete representation of the entity that changed, like the full resource representation you would retrieve from a RESTful API[^3]. Synonym for [god event](#god-event). See also [fat event](#fat-event) and [event carried state transfer](#event-carried-state-transfer).
 
 <a id="signal-event"></a>**Signal Event**:
-An [event](#event) that only signals that something changed in the sender's domain, without containing the changed data. It carries only a reference to the source of the event. Receivers ask the source when they need more detail.[^1] Synonym for [event notification](#event-notification), [trigger event](#trigger-event), and [clickbait event](#clickbait-event).
+An [event](#event) that only signals that something changed in the sender's domain, without containing the changed data. It carries only a reference to the source of the event. Receivers ask the source when they need more detail.[^3] Synonym for [event notification](#event-notification), [trigger event](#trigger-event), and [clickbait event](#clickbait-event).
 
 <a id="summary-event"></a>**Summary Event**:
 An [event](#event) that summarizes the outcome of a business process which consists of a sequence of more detailed events which are not interesting to subscribers.[^6]
 
 <a id="trigger-event"></a>**Trigger Event**:
-An [event](#event) that only signals that something changed in the sender's domain, without containing the changed data. It carries only a reference to the source of the event. Receivers ask the source when they need more detail.[^1] Synonym for [event notification](#event-notification), [signal event](#trigger-event), and [clickbait event](#clickbait-event).
+An [event](#event) that only signals that something changed in the sender's domain, without containing the changed data. It carries only a reference to the source of the event. Receivers ask the source when they need more detail.[^3] Synonym for [event notification](#event-notification), [signal event](#trigger-event), and [clickbait event](#clickbait-event).
 
 <!--
 <a id="replication-event"></a>**Replication Event**:
